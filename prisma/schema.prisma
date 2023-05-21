@@ -1,0 +1,56 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Matakuliah {
+  Kode      String      @unique @db.VarChar(10)
+  NIKDosen  String      @db.VarChar(20)
+  Nama      String      @db.VarChar(100)
+  SKS       Int         @db.SmallInt()
+  
+  Dosen     Dosen     @relation(fields: [NIKDosen], references: [NIK])
+  Nilai     Nilai[]
+
+  @@map("MataKuliah")
+}
+
+model Dosen {
+  NIK           String      @unique @db.VarChar(20)
+  Nama          String      @db.VarChar(100)
+  TanggalLahir  DateTime
+  MataKuliah    Matakuliah[]
+
+  @@map("Dosen")
+}
+
+model Mahasiswa {
+  NoMhs         String        @unique @db.VarChar(20)
+  Nama          String        @db.VarChar(100)
+  TanggalLahir  DateTime
+  TanggalMasuk  DateTime?
+  
+  Nilai         Nilai[]
+
+  @@map("Mahasiswa")
+}
+
+model Nilai {
+  KodeMK        String      @db.VarChar(10)
+  NoMhs         String      @db.VarChar(20)
+  Nilai         Float
+
+  MataKuliah    Matakuliah  @relation(fields: [KodeMK], references: [Kode])
+  Mahasiswa     Mahasiswa   @relation(fields: [NoMhs], references: [NoMhs])
+
+  @@id([KodeMK, NoMhs])
+  @@map("Nilai")
+}
+

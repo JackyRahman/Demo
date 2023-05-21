@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .container {
+                display: flex;
+            }
+            .card {
+                display: flex;
+                /* min-width: 140px; */
+                max-width: 170px;
+                background-color: #F0F0F0;
+                height: 45px;
+                align-items: center;
+                align-content: space-between;
+                justify-content: center;
+                border-radius: 45px;
+                margin-right: 20px;
+            }
+            .profile {
+                width: 45px;
+                height: 45px;
+                border-radius: 45px;
+                background-color:aquamarine;
+            }
+            .profile {
+                width: 45px;
+                height: 45px;
+                border-radius: 45px;
+            }
+            .description {
+                padding: 0px 12px;
+            }
+            .icon {
+                padding-right: 12px;
+                cursor: pointer;
+            }
+            .img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Contact Chips</h2>
+        <div class="container">
+            <div class="card">
+                <div class="profile"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0A5vUVeVGOSFIQqc0v7qG-ivfHKj6XOn8BA&usqp=CAU" alt="" class="img"></div>
+                <div class="description">John Doe</div>
+            </div>
+            <div class="card">
+                <div class="profile"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUxKP7In7Cp1LaH6JTZKc07YdjVDRgcIsCyA&usqp=CAU" alt="" class="img"></div>
+                <div class="description">Jane Row</div>
+                <div class="icon">&#10006;</div>
+            </div>
+        </div>
+    </body>
+</html>
