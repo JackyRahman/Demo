@@ -5,7 +5,16 @@ jawaban no 5 . Hal apa yang anda mau kerjakan dengan tanpa imbalan/bayaran ?
        sesuai arahan dari PO guna meningkatkan keamanan dan kualitas dari sistem yang di bangun.
 
 jawaban no 6. List kan aktivitas anda dalam 24 jam ?
----> hari minggu jam 
+---> hari minggu 22-05-2023
+    05:00 bangun
+    07:00 beres aktifitas pagi lainnya
+    10:00 discuss bareng team di perusahaan sekarang karena ada yang butuh bantuan
+    11:00 bantu bug fix bareng temen2
+    15:00 bimbing adik bootcamp fullstack
+    19:00 bantu review2 materi adik dari bootcampny
+    21:00 mulai mengerjakan teknikal test IT dari UNOTEK
+    00:00 hari selesai
+    00:30 review2 hasil dan testing ulang jawaban dan push ke repo
 
 
 jawaban no 7.	Dalam 5 Tahun mendatang hal apa yang ingin anda capai ?
